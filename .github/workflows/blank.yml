@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actionsfgfg
+# This is a basic workflow to help you get started with ActionsfgfgIDK
 
 name: CI
 
@@ -6,13 +6,13 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branchhello
   push:
-    branches: [ "master", "beta", "alpha" ]
+    branches: [ "master", "beta", "alpha", "next" ]
 
 
   # Allows you to run this workflow manually from the Actions tab idkffff
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# A workflow run is made up of one or more jobs that can run sequentially or in parallelgurll
 jobs:
   # This workflow contains a single job called "build"dfsfsfd
   build:
@@ -28,9 +28,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line scripttt22
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
-          npm install @google/semantic-release-replace-plugin
-          npm install @semantic-release/exec
-          npm install @semantic-release/git
+          npm install -g @google/semantic-release-replace-plugin
+          npm install -g @semantic-release/git
+          npm install -g semantic-release
           npx semantic-release --debug
