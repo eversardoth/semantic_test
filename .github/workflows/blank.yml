@@ -35,6 +35,6 @@ jobs:
           mkdir dist
           echo 'hello' > dist/ever.js
           echo 'hola' > text.txt
-          npm install @semantic-release/exec
+          npm install @semantic-release/exec -D
           npm install @semantic-release/git
           npx semantic-release --debug
