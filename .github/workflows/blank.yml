@@ -30,6 +30,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
+          npm install @google/semantic-release-replace-plugin
           npm install @semantic-release/exec
           npm install @semantic-release/git
           npx semantic-release --debug
