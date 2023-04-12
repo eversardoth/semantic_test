@@ -30,6 +30,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
+          mkdir docs
+          echo 'doc' > docs/doc.txt
+          mkdir dist
+          echo 'hello' > dist/ever.js
           echo 'hola' > text.txt
           npm install @semantic-release/git
           npx semantic-release --debug
